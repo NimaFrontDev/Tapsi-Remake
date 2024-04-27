@@ -935,31 +935,26 @@ nav {
 .prize {
   background-color: red;
   flex: 0 0 290px;
-}
-.prize--image {
-  width: auto;
-  border-radius: 32px;
-  overflow: auto;
+  align-items: center;
 }
 .prize--image > img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 32px;
 }
 .prize--description {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  position: relative;
-  top: -15%;
-  width: 80%;
+  background-color: blue;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   border-radius: 32px;
+  padding: 1rem 1.5rem;
+  transform: translateY(-60px);
+  width: 80%;
   margin: auto;
   text-align: center;
-  background-color: blue;
 }
 .prize--description--header {
   font-size: 1.2rem;
   display: flex;
-  flex-direction: row;
+  align-items: center;
 }
