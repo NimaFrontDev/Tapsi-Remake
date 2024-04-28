@@ -1005,7 +1005,7 @@ nav {
 /* ACCORDION */
 
 .accordion--wrapper {
-  /* padding: 2rem; */
+  margin-bottom: 8rem;
   box-shadow: 0 9px 12px rgba(0, 0, 0, 0.05);
   border: 2px solid #ececec;
   border-radius: 10px;
@@ -1125,4 +1125,54 @@ nav {
   margin-right: 0.5rem;
   font-size: 1.2rem;
   color: var(--color-Primary);
+}
+
+/* SELECT WEBINAR TYPE SECTION */
+
+.select-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem;
+}
+.select-control input[type="radio"] {
+  display: none;
+}
+.select-control {
+  flex-grow: 1;
+}
+.select-type :not(:last-child) {
+  margin-left: 2rem;
+}
+.select-control label {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  border: 2px solid #ccc;
+  border-radius: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #444;
+  cursor: pointer;
+  position: relative;
+}
+.select-control label::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  box-shadow: 0 0 0 2px #ccc;
+  border-radius: 100%;
+  right: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.select-control input[type="radio"]:checked + label {
+  border: 2px solid var(--color-Primary);
+  color: var(--color-Primary);
+}
+.select-control input[type="radio"]:checked + label::before {
+  background-color: var(--color-Primary);
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px var(--color-Primary);
 }
