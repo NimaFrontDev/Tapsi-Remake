@@ -19,6 +19,7 @@
   --color-heading: #000;
   --color-body: #333;
   --color-white: #fff;
+  --avatar-size: 50px;
 }
 
 html {
@@ -1082,4 +1083,46 @@ nav {
   .accordion--about__title {
     padding: 2.5rem 3rem 1.7rem 0;
   }
+}
+
+/* AVATAR SECTION */
+.avatar-group {
+  display: flex;
+  align-items: center;
+}
+.avatar-group .avatar {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border: 3px solid #fff;
+  overflow: hidden;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-left: -20px;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+}
+.avatar-group .avatar img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.avatar:hover:not(:last-of-type) {
+  transform: translate(10px);
+}
+.avatars-hidden {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-Primary);
+  color: #fff;
+  font-size: 1.4rem;
+  border: 3px solid #fff;
+  border-radius: 100%;
+}
+.avatar--suggestion {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--color-Primary);
 }
