@@ -26,8 +26,11 @@
 // });
 
 // Accordion
-const accordionHeader = document.querySelector(".accordion--header");
-const accordion = document.querySelector(".accordion");
-accordionHeader.addEventListener("click", (e) => {
-  accordion.classList.toggle("accordion--extended");
+// const accordionHeaders = document.querySelectorAll(".accordion--header");
+const accordion = document.querySelectorAll(".accordion");
+accordion.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    console.log(e.target.parentElement);
+    item.classList.toggle("accordion--extended");
+  });
 });

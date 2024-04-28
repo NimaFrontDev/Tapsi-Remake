@@ -1003,22 +1003,54 @@ nav {
 
 /* ACCORDION */
 
-/* .accordion--wrapper {
-  padding: 2rem;
-  font-size: 1.8rem;
-} */
+.accordion--wrapper {
+  /* padding: 2rem; */
+  box-shadow: 0 9px 12px rgba(0, 0, 0, 0.05);
+  border: 2px solid #ececec;
+  border-radius: 10px;
+}
+.accordion--intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ececec;
+}
+.accordion--intro .accordion--title {
+  padding: 1.5rem 2rem;
+}
+.accordion--edit-btn {
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  color: var(--color-Primary);
+  cursor: pointer;
+}
+.accordion--about {
+  border-bottom: 2px solid #ececec;
+}
+.accordion--about__title {
+  padding: 2.5rem 3rem 1.7rem 0;
+}
+.accordion--about__desc {
+  width: 70%;
+  font-size: 1.7rem;
+  color: #878787;
+  padding: 0 3rem 3rem 0;
+}
 .accordion--header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 2rem;
   color: var(--color-body);
-  border: 2px solid #cecece;
+  /* border: 2px solid #cecece; */
 }
 .accordion--title {
   font-size: 1.8rem;
 }
-.accordion--extended .accordion--header .icon {
+.accordion--extended .accordion--header {
+  border-bottom: 2px solid #ececec;
+}
+.accordion--extended .accordion--header .chevron-icon {
   transform: rotate(90deg) translateY(-5px);
 }
 .accordion--header .icon {
@@ -1026,14 +1058,13 @@ nav {
   color: var(--color-Primary);
   transition: all 0.3s ease-out;
 }
-
 .accordion--header .plus-icon {
   text-align: left;
   flex: 1;
   margin-left: 1.5rem;
 }
 .accordion--content {
-  background-color: gold;
+  /* background-color: gold; */
   overflow: hidden;
   max-height: 0;
   opacity: 0;
@@ -1044,7 +1075,11 @@ nav {
   opacity: 1;
 }
 @media screen and (min-width: 768px) {
-  .accordion--header {
+  .accordion--header,
+  .accordion--intro .accordion--title {
     padding: 2.5rem 3rem;
+  }
+  .accordion--about__title {
+    padding: 2.5rem 3rem 1.7rem 0;
   }
 }
